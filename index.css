@@ -298,6 +298,7 @@
     }
     .close {
         color: #b60012;
+        display: none;
     }
     .dash-board{
         width: 85%;
@@ -320,5 +321,8 @@
     }
     .mobile-filter-status{
         display: none;
+    }
+    .open{
+        display: block;
     }
 }
