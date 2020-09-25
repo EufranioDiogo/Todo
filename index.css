@@ -253,6 +253,9 @@
     .mobile-filter-status{
         display: none;
     }
+    .close{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 755px){
