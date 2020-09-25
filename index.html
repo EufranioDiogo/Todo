@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="CSS/universal.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo" rel="stylesheet" />
+  <title>To Do App</title>
+</head>
+<body>
+  <div id="main-app">
+    <div class="mobile-filter-status">
+      
+    </div>
+    <i class="fas fa-chart-pie status-btn-mobile open"></i>
+    <i class="far fa-times-circle status-btn-mobile close"></i>
+    <div class="main-conteiner">
+      
+      <header-component  :active-tab="activeTab" :activetodos="totalUncompleted" :completedtodos="totalCompleted" @change-tab="changeTab"></header-component>
+
+      <input-task-component :active-tab="activeTab" @add-todo="addTodo" v-if="activeTab == 'active' || activeTab == 'all'"></input-task-component>
+
+      <active-todos-component v-if="activeTab == 'active'" :todos="activeList" @complet-todo="completTodo"></active-todos-component>
+
+      <completed-todos-component v-else-if="activeTab == 'completed'" :todos="completedList" @undo-todo="undoTodo" @delete-todo="deleteTodo" @delete-all-todo-completed="deleteAllTodoCompleted"></completed-todos-component>
+
+      <all-todos-component v-else :todos="allList" :actual-tab="activeTab" @undo-todo="undoTodo" @complet-todo="completTodo"></all-todos-component>
+
+    </div>
+
+    <dash-board-component :total-todos="totalTasks" :total-completed="totalCompleted" :total-uncompleted="totalUncompleted"></dash-board-component>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

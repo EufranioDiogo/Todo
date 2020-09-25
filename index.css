@@ -1,0 +1,324 @@
+@media only screen and (max-width: 2500px){
+    .main-app{
+        display: flex;
+    }
+    .main-conteiner{
+        width: 50%;
+        margin: 3rem auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .main-conteiner .header{
+        position: relative;
+        width: 100%;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 0.1rem solid #3333335f;
+    }
+    .main-conteiner .header .header-title {
+        font-family: Poppins, sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 2rem 0;
+        position: relative;
+        width: auto;
+        text-align: center;
+        align-self: flex-start;
+    }
+    .main-conteiner .header .menu-options{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none
+    }
+    .main-conteiner .header .menu-options .menu-option{
+        padding: 1.5rem 2.5rem;
+        border: 0.2rem solid #fff;
+        font-size: 1.4rem;
+        font-family: Poppins, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        transition: 0.5s;
+        cursor: pointer;
+        position: relative;
+    }
+    .menu-option .todo-number{
+        position: absolute;
+        top: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 50%;
+        font-family: Heebo, sans-serif;
+        background-color: #00a1ce45;
+        font-size: 1.2rem;
+        transition: 0.5s;
+    }
+    .main-conteiner .header .menu-options .menu-option:hover{
+        border-bottom: 0.2rem solid #008eb6;
+    }
+    .active-tab{
+        border-bottom: 0.2rem solid #008eb6 !important;
+    }
+    .input-field-conteiner{
+        position: relative;
+        padding: 2rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex: auto;
+    }
+    .input-field-conteiner input{
+        border: 0;
+        padding: 1rem 1rem 1rem 0;
+        box-shadow: 0.2 0.0 0.45rem #00000009;
+        color: #333;
+        font-family: Poppins, sans-serif;
+        font-size: 1.6rem;
+        border-bottom: 0.05rem solid #3333335f;
+        margin-right: 1rem;
+        width: 83%;
+    }
+    
+    .input-field-conteiner input:focus{
+        border-bottom: 0.05rem solid #333333;
+    }
+    
+    .input-field-conteiner button {
+        border: 0;
+        border-radius: 0.5rem;
+        padding: 0.5rem 3.5rem;
+        background-color: #008fb6ae;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 800;
+        cursor: pointer;
+        color: #fff;
+    }
+    .input-field-conteiner button:hover{
+        background-color: #008fb6;
+    }
+    .todo-tab{
+        width: 83%;
+        padding: 2rem 0;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        max-height: 35rem;
+        overflow-y: auto;
+        align-self: flex-start;
+    }
+    .todo-tab .todo{
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        transition: 0.2s;
+        align-items: center;
+    }
+    .todo i {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color: #4a4a4ad5;
+        transition: 0.5s;
+    }
+    .todo i:hover{
+        color: #b95900;
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+    .todo-completed i{
+        color: #b95900;
+    }
+    .trash{
+        color: #333 !important;
+    }
+    .trash:hover{
+        color: #e40000 !important;
+    }
+    .todo-completed i:hover{
+        color: #4a4a4ad5;
+        transform: none;
+    }
+    .todo-completed span{
+        color: #333333c0 !important;
+        text-decoration: line-through !important;
+    }
+    .todo:hover{
+        background-color: #00000012;
+    }
+    .todo .todo-text{
+        height: 100%;
+        display: block;
+        padding: 1rem 0;
+        width: 90%;
+        overflow-y: auto;
+    }
+    .todo span{
+        font-size: 1.3rem;
+        font-family: Heebo, sans-serif;
+    }
+    .completed-todos-tab{
+        width: 100%;
+    }
+    .completed-todos-tab .todo{
+        width: 83%;
+    }
+    .btn-clear-all-todo-completed{
+        position: absolute;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #e400009e;
+        transition: 0.5s;
+        color: #fff;
+        font-weight: 800;
+        text-align: center;
+        right: 3%;
+    }
+    .btn-clear-all-todo-completed:hover{
+        background-color: #e40000;
+        cursor: pointer;
+    }
+    
+    .dash-board{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 2%;
+        top: 3%;
+        width: 20%;
+    }
+    .dash-board .dash-board-row{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    .dash-board .dash-board-row .dash-board-field-title-conteiner{
+        align-self: start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+    }
+    .dash-board .dash-board-row .dash-board-field-title-conteiner .dash-board-field-percentage{
+        font-family: Poppins, sans-serif;
+        color: #333;
+    }
+    .dash-board .dash-board-row .dash-board-field-title-conteiner .dash-board-field-title{
+        font-family: Poppins, sans-serif;
+        color: #333;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+    }
+    .dash-board .dash-board-row .dash-board-date-conteiner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .dash-board .dash-board-row .dash-board-date-conteiner p{
+        align-self: start;
+        color: #333333d3;
+        font-size: 1.2rem;
+        font-family: Heebo, sans-serif;
+    }
+    .dash-board-progress-bar-conteiner{
+        height: 0.5rem;
+        width: 100%;
+        position: relative;
+        background-color: rgba(51, 51, 51, 0.186);
+        border-radius: 2rem;
+    }
+    .dash-board-progress-bar-conteiner .dash-board-progress-bar{
+        position: absolute;
+        height: 100%;
+        border-radius: 2rem;
+        background-color: #333;
+        transition: 0.5s;
+    }
+    .completed-progress-bar{
+        background-color: #008eb6 !important;
+    }
+    .uncompleted-progress-bar{
+        background-color: #da001d !important;
+    }
+    .open{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
+    .mobile-filter-status{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 755px){
+    .main-conteiner{
+        width: 90%;
+    }
+    .input-field-conteiner input{
+        width: 75%;
+    }
+    .input-field-conteiner button{
+        padding: 0.5rem 1.5rem;
+        background-color: #008eb6;
+    }
+    .todo-tab{
+        width: 100%;
+        max-height: max-content;
+    }
+    .completed-todos-tab .todo{
+        width: 100%;
+    }
+    .btn-clear-all-todo-completed{
+        position: relative;
+        right: 0;
+    }
+    .status-btn-mobile{
+        font-size: 2.5rem;
+        position: absolute;
+        right: 5%;
+        padding: 0.5rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        
+        z-index: 3;
+    }
+    .open {
+        color: #0098ca;
+    }
+    .close {
+        color: #b60012;
+    }
+    .dash-board{
+        width: 85%;
+        background-color: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        z-index: 2;
+        margin-top: 15%;
+        display: none;
+    }
+    .mobile-filter-status{
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: #33333317;
+        z-index: 1;
+    }
+    .mobile-filter-status{
+        display: none;
+    }
+}
