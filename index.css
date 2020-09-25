@@ -250,12 +250,6 @@
     .uncompleted-progress-bar{
         background-color: #da001d !important;
     }
-    .open{
-        display: none;
-    }
-    .close{
-        display: none;
-    }
     .mobile-filter-status{
         display: none;
     }
@@ -290,15 +284,14 @@
         padding: 0.5rem;
         background-color: #fff;
         border-radius: 0.5rem;
-        
         z-index: 3;
     }
     .open {
         color: #0098ca;
+        display: block;
     }
     .close {
         color: #b60012;
-        display: none;
     }
     .dash-board{
         width: 85%;
@@ -321,8 +314,5 @@
     }
     .mobile-filter-status{
         display: none;
-    }
-    .open{
-        display: block;
     }
 }
